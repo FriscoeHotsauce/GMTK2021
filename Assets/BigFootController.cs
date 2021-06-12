@@ -72,6 +72,7 @@ public class BigFootController : MonoBehaviour
         agent.speed = shadeSpeed;
         animator.Play("Sprint");
         modifyTransparency(1f);
+        navUpdateInterval = .05f;
     }
 
     private void setSun(){
@@ -79,6 +80,7 @@ public class BigFootController : MonoBehaviour
         agent.speed = sunSpeed;
         animator.Play("Walk");
         modifyTransparency(sunTransparency);
+        navUpdateInterval = 1.5f;
     }
 
     private void modifyTransparency(float transparency){
