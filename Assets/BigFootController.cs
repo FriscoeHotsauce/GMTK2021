@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+public enum BFState{shade,sun}
+
+
 public class BigFootController : MonoBehaviour
 {
     public float navUpdateInterval = 0.5f;
@@ -21,7 +24,6 @@ public class BigFootController : MonoBehaviour
     public List<Material> bfMaterials;
     private bool stateChange;
 
-    public enum BFState{shade,sun}
 
     void Start()
     {
@@ -41,7 +43,10 @@ public class BigFootController : MonoBehaviour
         updateBFState();
     }
 
-    
+    public BFState GetBFState(){
+        return currentState;
+    }    
+
 
     private void updateBFState(){
         Ray ray = new Ray();

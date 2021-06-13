@@ -19,4 +19,8 @@ public class EndSceneLoader : MonoBehaviour
     public void loadCredits(){
         SceneManager.LoadScene(3, LoadSceneMode.Single);
     }
+
+    public void exitGame(){
+        Application.Quit();
+    }
 }

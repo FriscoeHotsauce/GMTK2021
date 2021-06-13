@@ -6,6 +6,7 @@ public class CloudDrifter : MonoBehaviour
 {
 
     public float cloudSpeed = 10.0f;
+    public float speedVariance = 2f;
     public Vector3 previousPosition;
     public float distanceTraveled;
     public CloudSpawner cloudSpawner;
@@ -13,7 +14,7 @@ public class CloudDrifter : MonoBehaviour
     // Update is called once per frame
 
     void Start(){
-        cloudSpeed = cloudSpeed + Random.Range(-2f, 2f);
+        cloudSpeed = cloudSpeed + Random.Range(-speedVariance, speedVariance);
         previousPosition = transform.position;
     }
 

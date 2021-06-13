@@ -144,6 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cloudSpeed: 10
+  speedVariance: 2.5
   previousPosition: {x: 0, y: 0, z: 0}
   distanceTraveled: 0
   cloudSpawner: {fileID: 0}
